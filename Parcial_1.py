@@ -71,9 +71,8 @@ def cargar_transacciones():
         with open ("transacciones.json", "r", encoding="utf-8") as archivo:
             transacciones = json.load(archivo)
         return [Transaccion.from_dict(d) for d in transacciones]
-    return [
+    return []
 
-    ]
 transacciones = cargar_transacciones()
 def guardar_transacciones(transaccion):
     transacciones = [t.to_dict() for t in transaccion]
